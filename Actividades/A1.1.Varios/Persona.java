@@ -14,5 +14,20 @@ public class Persona
     {
         this.name = name;
     }
-
+    public void setGender(char gender)
+    {
+        this.gender = gender;
+    }
+    public char getGender()
+    {
+        return gender;
+    }
+    public void setAge(int age)
+    {
+        this.age = age;
+    }
+    public int getAge()
+    {
+        return age;
+    }
 }
