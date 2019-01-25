@@ -12,6 +12,22 @@ public class Date
     {
         return day;
     }
+    public void setMonth(int month)
+    {
+        this.month = month;
+    }
+    public int getMonth()
+    {
+        return month;
+    }
+    public void setYear(int year)
+    {
+        this.year = year;
+    }
+    public int getYear()
+    {
+        return year;
+    }
     public void setDate(String date)
     {
         if(date.length() != 10)
@@ -27,7 +43,7 @@ public class Date
     public String getDateString()
     {
         String tempDate = new String("");
-        tempDate = tempDate + day + "/" + month + "/" + year;    
+        tempDate = tempDate + day + "/" + month + "/" + year;
         return tempDate;
     }
 }
