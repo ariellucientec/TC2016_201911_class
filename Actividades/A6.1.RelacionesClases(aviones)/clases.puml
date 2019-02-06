@@ -1,0 +1,74 @@
+@startuml
+
+class MotorAircraft{
+    -String airLineName;
+    -Motor theEngine;
+    -Pilot thePilot;
+    +void fly();
+    +void maintainance(Engineer);
+    +void print()
+}
+
+class Airplane{
+    -int numberOfWings;
+    -Wings[] theWings;
+}
+
+class Helicopter{
+    -int numberOf fanBlades;
+    -FanBlades[] theFanBlades;
+}
+
+class Motor{
+    -int power;
+    -int torque;
+    +startEngine();
+    -stopEngine();
+}
+
+class AircraftWings{
+    -int numberOfFlaps;
+    -int numberOfSlats;
+}
+
+class FanBlades{
+    -int size;
+}
+
+class Pilot{
+    -int flightTime;
+    -int licenseNumber;
+    +void print();
+}
+
+class Passenger{
+    -int ticketNumber;
+    -int ticketType;
+    +void print();
+    +void fliesTo(String destination, MotorAircraft plane);
+}
+
+class Engineer{
+    -String licensedRole;
+    +void repair();
+    +void print();
+}
+
+class Person{
+    -String name;
+    -String address;
+    -String phone;
+    +void print();
+}
+
+Engineer -|> Person
+Passenger -|> Person
+Engineer -- MotorAircraft : "gives maintainance"
+Passenger -- MotorAircraft : "use"
+MotorAircraft o-- Pilot : "is operated by"
+MotorAircraft *-- "1..*" Motor : > "is composed of"
+MotorAircraft <|-- Airplane
+MotorAircraft <|-- Helicopter
+Airplane *-- "1..*" AircraftWings : > "is composed of"
+Helicopter *-- "1..*" FanBlades : > "is composed of"
+@enduml

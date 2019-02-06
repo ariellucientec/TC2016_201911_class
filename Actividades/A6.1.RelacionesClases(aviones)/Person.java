@@ -1,16 +1,15 @@
-public class Persona
+public class Person
 {
     private String nombre;
     private String direccion;
     private String telefono;
 
-    public Persona(String nombre, String direccion, String telefono)
+    public Person(String nombre, String direccion, String telefono)
     {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
-    }
-
+    }   
     public void print()
     {
         System.out.println("Nombre: "+ nombre);
