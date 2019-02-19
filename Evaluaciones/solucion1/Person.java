@@ -1,4 +1,4 @@
-package solucion1;
+package Evaluaciones.solucion1;
 
 public class Person
 {
@@ -26,15 +26,15 @@ public class Person
         return head;
     }
 
-    public void ask4Permission2Kiss(Person p)
+    public void ask4Permission2Kiss(Person p) //p is susanita (ver main)
     {
         getHead().getMouth().talk("can I kiss you, "+ p.getName() + "?");
-        p.givePermission2Kiss(this);
+        p.givePermission2Kiss(this); //this es pedro  (ver main)
     }
     private void givePermission2Kiss(Person p)
     {
         // If she/he is not too old or not too ugly
-        allowed2Kiss = p;
+        allowed2Kiss = p; //p is Pedro
     }
     public void kiss(Person p)
     {

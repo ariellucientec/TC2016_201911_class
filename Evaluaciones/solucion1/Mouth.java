@@ -1,4 +1,4 @@
-package solucion1;
+package Evaluaciones.solucion1;
 
 public class Mouth 
 {
